@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 
 import {echo} from './actions/echo'
 import {serverMessage} from './reducers'
-import Navigation from './components/Navigation'
-import Home from './components/Home'
+import Home from '../components/Home'
+import About from '../components/About'
 
 class App extends Component {
   componentDidMount() {
@@ -13,10 +13,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="fluid-container">
-        <Navigation />
-        <Home />
-      </div>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/about' component={About}/>
+        </Switch>
     );
   }
 }

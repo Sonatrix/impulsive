@@ -5,10 +5,9 @@ import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import {Route, Switch} from 'react-router'
 
-import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
-import Login from './containers/Login';
+import About from './components/About';
 import PrivateRoute from './containers/PrivateRoute';
 import configureStore from './store'
 
@@ -20,7 +19,8 @@ ReactDOM.render((
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/login/" component={Login} />
+        <Route exact path="/" component={App} />
+        <Route exact path="/about" component={About} />
         <PrivateRoute path="/" component={App}/>
       </Switch>
     </ConnectedRouter>
