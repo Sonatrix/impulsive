@@ -1,11 +1,10 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
-import Login from '../containers/Login';
 
 const Home = (props) => {
   return (
-    <div className="col-md-12" style={{display:'flex'}}>
-      <div className="col-md-9">
+    <div className="col-md-12">
+      <div className="col-md-12">
         <Jumbotron>
           <h1 className="display-3">Save and Earn Extra!</h1>
           <p>Tax breaks offered on your investments are not in the nature 
@@ -21,9 +20,6 @@ const Home = (props) => {
           they figure in the list too.
           </p>
         </Jumbotron>
-      </div>
-      <div className="col-md-3">
-        <Login/>
       </div>
     </div>
   );

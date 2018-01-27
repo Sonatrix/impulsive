@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="fluid-container">
-        <Navigation />
+        <Navigation {...this.props}/>
         <Home />
       </div>
     );

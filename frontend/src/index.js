@@ -11,6 +11,7 @@ import About from './components/About';
 import PrivateRoute from './containers/PrivateRoute';
 import configureStore from './store'
 
+import Login from './containers/Login';
 const history = createHistory()
 
 const store = configureStore(history)
@@ -21,6 +22,7 @@ ReactDOM.render((
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/login" component={Login} />
         <PrivateRoute path="/" component={App}/>
       </Switch>
     </ConnectedRouter>
