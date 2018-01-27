@@ -8,7 +8,7 @@ import {authErrors, isAuthenticated} from '../reducers'
 
 const Login = (props) => {
   if(props.isAuthenticated) {
-     return  <Redirect to='/' />
+     return  <Redirect to='/about' />
   }
 
   return (
