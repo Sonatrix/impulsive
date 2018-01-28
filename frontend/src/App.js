@@ -5,6 +5,7 @@ import {echo} from './actions/echo'
 import {serverMessage} from './reducers'
 import Navigation from './components/Navigation'
 import Home from './components/Home'
+import Footer from './components/Footer';
 
 class App extends Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="fluid-container">
         <Navigation {...this.props}/>
         <Home />
+        <Footer />
       </div>
     );
   }

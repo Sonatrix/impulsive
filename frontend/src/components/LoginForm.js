@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Alert, Button, Jumbotron,  Form } from 'reactstrap';
+import { Alert, Button,  Form } from 'reactstrap';
 
 import TextInput from './TextInput'
 
@@ -33,7 +33,7 @@ export default class LoginForm extends Component {
     const errors = this.props.errors || {}
 
     return (
-      <Jumbotron>
+      <div className="container">
         <Form onSubmit={this.onSubmit}>
           <h2>Login Here</h2>
           {errors.non_field_errors?<Alert color="danger">{errors.non_field_errors}</Alert>:""}
@@ -41,7 +41,7 @@ export default class LoginForm extends Component {
           <TextInput name="password" label="Password" error={errors.password} type="password" onChange={this.handleInputChange}/>
           <Button type="submit" color="primary">Log In</Button>
         </Form>
-      </Jumbotron>
+      </div>
     )
   }
 }

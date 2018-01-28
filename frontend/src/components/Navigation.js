@@ -8,7 +8,6 @@ import {
   NavItem,
   NavLink
  } from 'reactstrap';
-import {isAuthenticated} from '../reducers'
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -25,9 +24,10 @@ export default class Navigation extends React.Component {
     });
   }
   render() {
+
     return (
-      <div>
-        <Navbar color="grey" light expand="md">
+      
+        <Navbar color="grey" dark expand="md" className="bg-dark fixed-top">
           <NavbarBrand href="/">Extra Wealth</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -39,12 +39,11 @@ export default class Navigation extends React.Component {
                 <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/login"><span className="glyphicon glyphicon-user"></span>{isAuthenticated?'Logout':'Login'}</NavLink>
+                <NavLink href="/login"><span className="glyphicon glyphicon-user"></span>Login</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
     );
   }
 }
