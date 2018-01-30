@@ -14,14 +14,22 @@ const Login = (props) => {
   return (
     <div>
       <Navigation/>
-      <div className="row">
-      <div className="col-md-3 col-md-offset-4">
-        <div className="login-page">
-
-         <LoginForm {...props}/>
+      <section className="login-block" style={{ marginTop: 80 }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <LoginForm {...props} />
+            </div>
+            <div className="col-md-8 right-sec">
+              <img
+                className="img-fluid"
+                src="http://placehold.it/900x400"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
+      </section>
     </div>
   )
 }

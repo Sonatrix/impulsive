@@ -36,7 +36,7 @@ export default class Navigation extends React.Component {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/">Become Advisor</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/login"><span className="glyphicon glyphicon-user"></span>Login</NavLink>
