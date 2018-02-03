@@ -1,0 +1,36 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block app_title %}Extra extra {% endblock %}</title>
+    <script src="{% static 'Loan/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'Loan/js/tether.js' %}"></script>
+    <script src="{% static 'Loan/js/bootstrap.min.js' %}"></script>
+        <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="{% static 'Loan/css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Loan/assets/font-awesome/css/font-awesome.css' %}">
+     {% block app_head %}{% endblock %}
+
+</head>
+
+<body>
+    {% include "Loan/header.html" %}
+    <div class="container-fluid" style="padding:50px 0px 20px 0px; ">
+        {% block app_body %}{% endblock %}
+    </div>
+    {% include "Loan/footer.html" %}
+  
+</body>
+</html>
