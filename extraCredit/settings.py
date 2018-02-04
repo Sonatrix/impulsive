@@ -69,7 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'extraCredit.wsgi.application'
-
+AUTH_USER_MODEL = 'Loan.Advisor'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'extraCredit.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'extrawealth',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'NAME': 'creditunited',
+        'USER': 'django',
+        'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': '',
     }

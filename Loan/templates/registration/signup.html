@@ -1,0 +1,28 @@
+{% extends "Loan/base.html" %} {% block app_title %}Sign Up{% endblock %} {% block app_body %} {% if request.user.is_authenticated %}
+<meta http-equiv="REFRESH" content="0;url={% url '/' %}"> {% else %}
+<section class="login-block" style="margin-top:60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 right-sec">
+                <img class="img-fluid" src="http://placehold.it/900x400" alt="" />
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default form-container">
+                    <div class="panel-body">
+                        <h2>Sign up</h2>
+                        <form method="post">
+                            {% csrf_token %} {{ form.as_p }}
+                            <button type="submit">Sign up</button>
+                        </form>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="margin-bottom">
+                            For any login related queries, contact system administrator.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %} {% endblock %}
