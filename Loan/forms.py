@@ -10,5 +10,5 @@ class CreateUserForm(UserCreationForm):
         include = ('username', 
                     'email', 'first_name','password')
         exclude = ('deleted', 'referred_by', 'groups', 'password', 'profile_pic',
-                    'user_permissions', 'date_joined', 'last_login','is_superuser','is_staff','is_active')
+                    'user_permissions', 'date_joined', 'last_login', 'is_superuser','is_staff','is_active')
 
