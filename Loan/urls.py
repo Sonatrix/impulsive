@@ -1,11 +1,12 @@
 from django.urls import path
-from .views import index, SignUp
+from .views import index, SignUp, about
 from django.contrib.auth import views as auth_views
 
 app_name = 'Loan'
 
 urlpatterns = [
     path('', index, name='index'),
+    path('about', about, name='about'),
 ]
 
 #login views
