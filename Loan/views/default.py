@@ -10,6 +10,7 @@ def index(request):
 def about(request):
     return render(request, 'about.html', {})
 
+
 def handler404(request):
     return render(request, 'Loan/404.html',{})
 
