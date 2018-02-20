@@ -21,13 +21,14 @@
      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="{% static 'Loan/css/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'Loan/assets/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'Loan/css/products-main.css' %}">
      {% block app_head %}{% endblock %}
 
 </head>
 
 <body>
     {% include "Loan/header.html" %}
-    <div class="container-fluid" style="padding:50px 0px 20px 0px; ">
+    <div class="container-fluid py-5">
         {% block app_body %}{% endblock %}
     </div>
     {% include "Loan/footer.html" %}

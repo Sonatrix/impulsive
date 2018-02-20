@@ -9,3 +9,6 @@ def cards(request):
 
 def insurance(request):
 	return render(request, 'products/insurance.html', {})
+
+def products(request):
+	return render(request, 'products/products.html', {})

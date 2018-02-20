@@ -1,6 +1,6 @@
 {% extends "Loan/base.html" %} {% block app_title %}Login{% endblock %} {% block app_body %} {% if request.user.is_authenticated %}
 <meta http-equiv="REFRESH" content="0;url={% url '/' %}"> {% else %}
-<section class="login-block" style="margin-top:60px">
+<section class="login-block py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-8 right-sec">

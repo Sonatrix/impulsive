@@ -1,6 +1,6 @@
 from django.urls import path
 from .views.default import index, SignUp, about
-from .views.products import loan, insurance, cards
+from .views.products import loan, insurance, cards, products
 from django.contrib.auth import views as auth_views
 
 app_name = 'Loan'
@@ -12,6 +12,7 @@ urlpatterns = [
 
 #products views
 urlpatterns += [
+	path('products', products, name='products'),
     path('products/loan', loan, name='loan'),
     path('products/insurance', insurance, name='insurance'),
     path('products/cards', cards, name='cards'),

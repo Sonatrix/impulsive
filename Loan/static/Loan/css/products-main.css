@@ -1,0 +1,11 @@
+.pd-bg {
+    background-image: url('static/images/products-bg.jpg');
+    padding-top: 20px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    left: 0;
+}
