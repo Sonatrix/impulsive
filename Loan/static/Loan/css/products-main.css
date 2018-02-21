@@ -1,6 +1,5 @@
 .pd-bg {
-    background-image: url('static/images/products-bg.jpg');
-    padding-top: 20px;
+    background-image: url("../images/products-bg.jpg");
 }
 
 footer {
