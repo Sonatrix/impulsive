@@ -1,9 +1,9 @@
-{% extends "Loan/base.html" %} {% block app_title %}Welcome to Refferel Credit{% endblock %} {% block app_body %} {% load static from staticfiles %}
+{% extends "Loan/base.html" %} {% block app_title %}Welcome to Referrel Credit{% endblock %} {% block app_body %} {% load static from staticfiles %}
 <div class="container">
     <!-- Heading Row -->
     <div class="row my-4">
         <div class="col-lg-8">
-            <img class="img-fluid rounded" src="{% static 'Loan/images/refferelcredit.png' %}" alt="refferel credit" title="refferel credit loans,insurance, credit cards">
+            <img class="img-fluid rounded" src="{% static 'Loan/images/referrelcredit.png' %}" alt="Referrel credit" title="Referrel credit loans,insurance, credit cards">
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-4">
@@ -23,6 +23,45 @@
     </div> -->
     <!-- Content Row -->
     <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="{% static 'Loan/images/refericon.png' %}" alt="Card image cap" style="max-width:70px;">
+                        <h5 class="card-title">Become a referral</h5>
+                        <p class="card-text">Sign up as a Referral Partner on Cashkumar and refer people you know who need a loan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="{% static 'Loan/images/assistant-icon.png' %}" alt="Card image cap" style="max-width:70px;">
+                        <h5 class="card-title">Assist with product</h5>
+                        <p class="card-text">We talk to your referral and explain everything to get him the product at the best possible rate!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="{% static 'Loan/images/buy.png' %}" alt="Card image cap" style="max-width:70px;">
+                        <h5 class="card-title">Referral gets product</h5>
+                        <p class="card-text">After verifying all documents, your referral will get his/her services/products done.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="{% static 'Loan/images/rewards.png' %}" alt="Card image cap" style="max-width:70px;">
+                        <h5 class="card-title">Get your rewards</h5>
+                        <p class="card-text">Earn money on each referral of atleast 0.5% of the specified amount</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- <div class="row">
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
@@ -56,13 +95,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
+    </div> -->
+<!--     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">How it works?</h5>
-                    <p class="card-text">As a trusted financial advisor, you could refer confidently your clients, friends,colleagues to Refferel Credit , to fulfil their loan requirements.</p>
+                    <p class="card-text">As a trusted financial advisor, you could refer confidently your clients, friends,colleagues to Referrel Credit , to fulfil their loan requirements.</p>
                     <p class="card-text">
                         With our experience in offering solutions to customers for their loan requirement having presence in more than 75 plus cities, this would enhance your portfolio , build trust ,and confidence.</p>
                     <p class="card-text">Once we receive your reference, concern team will verify and they will forward to sales team. Once it approve will be consider as Referral Sales. You will get a confirmation by registered email or phone number.</p>
@@ -70,6 +109,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {% endblock %}
