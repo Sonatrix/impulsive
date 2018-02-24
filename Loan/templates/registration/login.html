@@ -1,10 +1,11 @@
-{% extends "Loan/base.html" %} {% block app_title %}Login{% endblock %} {% block app_body %} {% if request.user.is_authenticated %}
+{% extends "Loan/base.html" %} {% block app_title %}Login{% endblock %} {% block app_body %} {% if request.user.is_authenticated %}{% load static from staticfiles %}
 <meta http-equiv="REFRESH" content="0;url={% url '/' %}"> {% else %}
 <section class="login-block py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-8 right-sec">
-                <img class="img-fluid" src="http://placehold.it/900x400" alt="" />
+                <img class="img-fluid" src="{% static 'Loan/images/refferelcredit.png' %}" alt="refferel credit" title="refferel credit loans,insurance, credit cards">
+                
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default form-container">
