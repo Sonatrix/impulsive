@@ -11,12 +11,12 @@
 - sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common
 
 ### run command to create database
-1. sudo -u postgres createdb creditunited psql
-2. CREATE ROLE django WITH LOGIN PASSWORD '12345';
-3. GRANT ALL PRIVILEGES ON DATABASE creditunited TO django;
-4. ALTER ROLE django SET client_encoding TO 'utf8';
-5. ALTER ROLE django SET default_transaction_isolation TO 'read committed';
-6. ALTER ROLE django SET timezone TO 'UTC';
+1. sudo -u postgres createdb referrelcredit psql
+2. CREATE ROLE admin WITH LOGIN PASSWORD '12345';
+3. GRANT ALL PRIVILEGES ON DATABASE referrelcredit TO admin;
+4. ALTER ROLE admin SET client_encoding TO 'utf8';
+5. ALTER ROLE admin SET default_transaction_isolation TO 'read committed';
+6. ALTER ROLE admin SET timezone TO 'UTC';
 
 
 

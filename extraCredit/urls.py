@@ -18,9 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
 	path('', include('Loan.urls')),
-	path('user/', include('Admin.urls')),
-    path('admin/', admin.site.urls),
+	#path('user/', include('Admin.urls')),
+    #path('admin/', admin.site.urls),
 ]
 
-handler404 = 'Loan.views.views.handler404'
-handler500 = 'Loan.views.views.handler500'
+handler404 = 'Loan.views.default.handler404'
+handler500 = 'Loan.views.default.handler500'

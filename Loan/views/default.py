@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from Loan.forms import CreateUserForm
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'comingsoon.html', {})
 
 def about(request):
     return render(request, 'about.html', {})

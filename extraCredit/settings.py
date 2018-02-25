@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ck)5j8d47h**qk0ss4oocq3#5$#a4h*qmjyp290w!j0!m13vhi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,14 +78,13 @@ AUTH_USER_MODEL = 'Loan.Advisor'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'creditunited',
-        'USER': 'django',
+        'NAME': 'referrelcredit',
+        'USER': 'admin',
         'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
