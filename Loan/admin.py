@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Advisor, Category, Subcategory, Order
 
-# Register your models here.
+admin.site.register(Advisor)
+admin.site.register(Category)
+admin.site.register(Subcategory)
+admin.site.register(Order)
+
