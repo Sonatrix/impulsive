@@ -9,6 +9,6 @@ class CreateUserForm(UserCreationForm):
         model = Advisor
         include = ('username', 
                     'email', 'first_name','password')
-        exclude = ('deleted', 'referred_by', 'groups', 'password', 'profile_pic',
-                    'user_permissions', 'date_joined', 'last_login', 'is_superuser','is_staff','is_active')
+        exclude = ('deleted','contact_no','pancard_info','city','state','postalCode','address', 'referred_by', 'groups', 'password', 'profile_pic',
+                    'user_permissions','is_verified', 'date_joined', 'last_login', 'is_superuser','is_staff','is_active')
 
