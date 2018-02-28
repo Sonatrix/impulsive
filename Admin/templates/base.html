@@ -12,35 +12,30 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Loan/css/bootstrap/bootstrap.min.css' %}">
     <link rel="icon" href="{% static 'Loan/images/logo2.jpg' %}" type="image/jpg" sizes="160x160">
     <link rel="stylesheet" href="{% static 'Loan/assets/font-awesome/css/font-awesome.css' %}">
-    <!-- MetisMenu CSS -->
-    <link href="{% static 'metisMenu/metisMenu.min.css' %}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{% static 'dist/css/sb-admin-2.css' %}" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="{% static 'morrisjs/morris.css' %}" rel="stylesheet"> {% block app_head %}{% endblock %}
+{% block app_head %}{% endblock %}
 </head>
 
 <body>
-    <div id="wrapper">
-        {% include "header.html" %}
-        <div class="container-fluid">
-            {% block app_body %}{% endblock %}
-        </div>
+    {% include "header.html" %}
+    <div class="d-flex">
+    {% include "sidebar.html" %}
+    <div class="content p-4">
+        {% block app_body %}{% endblock %}
     </div>
+</div>
+
     <script src="{% static 'Loan/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'dist/js/popper.min.js' %}"></script>
     <script src="{% static 'Loan/js/tether.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{% static 'metisMenu/metisMenu.min.js' %}"></script>
-    <!-- Morris Charts JavaScript -->
-    <script src="{% static 'raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'metisMenu/metisMenu.min.js' %}"></script>
-    <script src="{% static 'morrisjs/morris.min.js' %}"></script>
+    <script src="{% static 'Loan/js/bootstrap.min.js' %}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
+    
 </body>
 
 </html>
