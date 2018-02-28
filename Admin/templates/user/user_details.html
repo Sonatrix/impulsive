@@ -1,16 +1,28 @@
-{% extends "base.html" %} {% block app_title %} Welcome, {{user.first_name }}{% endblock %} {% block app_body %}
+{% extends "base.html" %} {% load static from staticfiles %} {% block app_title %} Welcome, {{user.first_name }}{% endblock %} {% block app_body %}
 <div id="page-wrapper">
     <div class="row">
+      <div class="col-md-12">
         <div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+            <div class="card-body">
+              <div class="col-md-12">
+                    <img alt="image" class="img-circle img-responsive" src="{% static 'Loan/images/assistant-icon.png' %}" style="max-width:160px;">
+                    <div>{{user.first_name}} {{user.last_name}}</div>
+                    <p>
+                        <a href="javascript:;" class="text-gray text-no-decoration">
+                                <i class="fa fa-fw fa-envelope"></i>
+                                Send Email
+                            </a>
+                    </p>
+                    <p>
+                        <a class="text-gray text-no-decoration">
+                                <i class="fa fa-fw fa-phone"></i>
+                                Call {{user.contact_no}} 
+                            </a>
+                    </p>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
 </div>
 {% endblock %}
