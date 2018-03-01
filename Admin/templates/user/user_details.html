@@ -4,14 +4,17 @@
       <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-              <div class="col-md-12">
+              <div class="col-md-12 d-flex">
+                    <div class="col-md-3">
                     <img alt="image" class="img-circle img-responsive" src="{% static 'Loan/images/assistant-icon.png' %}" style="max-width:160px;">
-                    <div>{{user.first_name}} {{user.last_name}}</div>
+                </div>
+                <div class="col-md-4">
+                    <h3>{{user.first_name}} {{user.last_name}}</h3>
                     <p>
-                        <a href="javascript:;" class="text-gray text-no-decoration">
+                        <span class="text-gray text-no-decoration">
                                 <i class="fa fa-fw fa-envelope"></i>
-                                Send Email
-                            </a>
+                                {{user.email}}
+                            </span>
                     </p>
                     <p>
                         <a class="text-gray text-no-decoration">
@@ -19,6 +22,13 @@
                                 Call {{user.contact_no}} 
                             </a>
                     </p>
+                    <p>{{user.city}} {{user.state}}</p>
+                    <p>Postal Code : {{user.postalCode}}</p>
+                    <p>PAN Card: {{user.pancard_info}}</p>
+                </div>
+                <div class="col-md-5">
+                    <p>Communication address: <br>{{user.address}}</p>
+                </div>
               </div>
             </div>
         </div>
