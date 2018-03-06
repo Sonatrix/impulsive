@@ -125,7 +125,7 @@
       <table role="presentation" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td style="vertical-align:top;width:600px;">
-      <![endif]--><div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-wrap: break-word; font-size: 0px; padding: 10px 25px;" align="left"><div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;">{% load gross from prices_i18n %}</div></td></tr></tbody></table></div><!--[if mso | IE]>
+      <![endif]--><div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-wrap: break-word; font-size: 0px; padding: 10px 25px;" align="left"><div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;">{% load prices_i18n %}</div></td></tr></tbody></table></div><!--[if mso | IE]>
       </td></tr></table>
       <![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
       </td></tr></table>
@@ -144,7 +144,7 @@
             {% trans "Subtotal" context "E-mail order lines summary table" %}
           </td>
           <td style="padding: 5px; text-align: right;" align="right">
-            {% gross order.get_subtotal_without_voucher html=True %}
+            {{ order.get_subtotal.gross|amount:'html' }}
           </td>
         </tr>
         <tr>
@@ -152,7 +152,7 @@
             {% trans "Shipping" context "E-mail order lines summary table" %}
           </td>
           <td style="padding: 5px; text-align: right;" align="right">
-            {% gross order.shipping_price html=True %}
+            {{ order.shipping_price.gross|amount:'html' }}
           </td>
         </tr>
         <tr>
@@ -160,7 +160,7 @@
             <strong>{% trans "Total" context "E-mail order lines summary table" %}</strong>
           </td>
           <td style="padding: 5px; text-align: right;" align="right">
-            <strong>{% gross order.total html=True %}</strong>
+            <strong>{{ order.total.gross|amount:'html' }}</strong>
           </td>
         </tr>
       </tfoot>
@@ -179,9 +179,9 @@
               <td style="padding: 5px;">{{ line.product_name }}</td>
               <td style="padding: 5px; text-align: right;" align="right">{{ line.quantity }}</td>
               <td style="padding: 5px; text-align: right;" align="right">
-                {% gross line.get_price_per_item html=True %}
+                {{ line.unit_price.gross|amount:'html' }}
               </td>
-              <td style="padding: 5px; text-align: right;" align="right">{% gross line.get_total %}</td>
+              <td style="padding: 5px; text-align: right;" align="right">{{ line.get_total.gross|amount }}</td>
             </tr>
           {% endfor %}
         {% endfor %}

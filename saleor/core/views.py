@@ -10,9 +10,6 @@ from ..dashboard.views import staff_member_required
 from ..product.utils import products_for_homepage, products_with_availability
 from .utils.schema import get_webpage_schema
 
-def index(request):
-    return TemplateResponse(
-        request, 'comingsoon.html', {})
 
 def home(request):
     products = products_for_homepage()[:8]

@@ -1,17 +1,17 @@
 {
-  "name": "Anosjc",
+  "name": "ShopStar",
   "version": "0.0.0",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/sonatrix/impulsive.git"
   },
-  "author": "Referrel Credit",
+  "author": "Sonatrix",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/sonatrix/impulsive"
+    "url": "https://github.com/sonatrix/impulsive/issues"
   },
-  "homepage": "http://www.referrelcredit.com/",
+  "homepage": "/",
   "engines": {
     "node": "^8.7.0",
     "npm": "^5.4.2"

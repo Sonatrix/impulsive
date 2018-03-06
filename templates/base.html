@@ -21,8 +21,6 @@
   {% endblock meta %}
 
   {% include 'favicon.html' %}
-  {% render_bundle 'vendors~dashboard~storefront' 'css' attrs='async' %}
-  {% render_bundle 'vendors~storefront' 'css' attrs='async' %}
   {% render_bundle 'storefront' 'css' attrs='async' %}
 
   {% block stylesheet %}{% endblock stylesheet %}
@@ -101,7 +99,7 @@
               <span>{% trans "menu" context "Hamburger button text" %}</span>
             </div>
             <a href="{% url 'home' %}">
-              <svg data-src="{% static "images/logo-document.svg" %}" height="38px" width="176px"/>
+              <svg data-src="{% static "images/logo.svg" %}" height="38px" width="176px"/>
             </a>
           </div>
           <div class="col-2 col-md-4 navbar__search static">
@@ -250,29 +248,14 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-12">
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/mirumeelabs/">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/referrelcredit/">
             <svg data-src="{% static "images/facebook-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/mirumee/saleor">
-            <svg data-src="{% static "images/github-logo.svg" %}" width="45px" height="45px"/>
-          </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/getsaleor">
-            <svg data-src="{% static "images/twitter-logo.svg" %}" width="45px" height="45px"/>
-          </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/+Mirumee">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com">
             <svg data-src="{% static "images/google-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/Mirumee-Talks/">
-            <svg data-src="{% static "images/meetup-logo.svg" %}" width="45px" height="45px"/>
-          </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/company/mirumee-software">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com">
             <svg data-src="{% static "images/linkedin-logo.svg" %}" width="45px" height="45px"/>
-          </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/mirumee">
-            <svg data-src="{% static "images/dribbble-logo.svg" %}" width="45px" height="45px"/>
-          </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/explore/tags/mirumee/">
-            <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px"/>
           </a>
         </div>
       </div>
@@ -281,8 +264,6 @@
 {% endblock %}
 {% block footer_scripts %}
   <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-  {% render_bundle 'vendors~dashboard~storefront' 'js' %}
-  {% render_bundle 'vendors~storefront' 'js' %}
   {% render_bundle 'storefront' 'js' %}
 {% endblock footer_scripts %}
 </body>
