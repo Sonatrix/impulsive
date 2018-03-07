@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 urlpatterns = [
-    url(r'^(?P<slug>[a-z0-9-_]+?)/$',
+    re_path(r'^(?P<slug>[a-z0-9-_]+?)/$',
         views.page_detail, name='details')]

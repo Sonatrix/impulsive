@@ -1,8 +1,9 @@
 from django.conf import settings
-from django.conf.urls import include, url
+from django.urls import path, re_path, include
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.views import serve
+from django.http import HttpResponse
 from django.views.i18n import JavaScriptCatalog
 from graphene_django.views import GraphQLView
 
@@ -22,31 +23,32 @@ from .search.urls import urlpatterns as search_urls
 handler404 = 'saleor.core.views.handle_404'
 
 urlpatterns = [
-    url(r'^', include(core_urls)),
-    url(r'^cart/', include((cart_urls, 'cart'), namespace='cart')),
-    url(r'^checkout/',
+    re_path(r'^', include(core_urls)),
+    path('robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file"),
+    re_path(r'^cart/', include((cart_urls, 'cart'), namespace='cart')),
+    re_path(r'^checkout/',
         include((checkout_urls, 'checkout'), namespace='checkout')),
-    url(r'^dashboard/',
+    re_path(r'^dashboard/',
         include((dashboard_urls, 'dashboard'), namespace='dashboard')),
-    url(r'^graphql', GraphQLView.as_view(
+    re_path(r'^graphql', GraphQLView.as_view(
         schema=schema, graphiql=settings.DEBUG), name='api'),
-    url(r'^jsi18n/$', JavaScriptCatalog.as_view(), name='javascript-catalog'),
-    url(r'^order/', include((order_urls, 'order'), namespace='order')),
-    url(r'^page/', include((page_urls, 'page'), namespace='page')),
-    url(r'^products/',
+    re_path(r'^jsi18n/$', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    re_path(r'^order/', include((order_urls, 'order'), namespace='order')),
+    re_path(r'^page/', include((page_urls, 'page'), namespace='page')),
+    re_path(r'^products/',
         include((product_urls, 'product'), namespace='product')),
-    url(r'^account/',
+    re_path(r'^account/',
         include((account_urls, 'account'), namespace='account')),
-    url(r'^feeds/',
+    re_path(r'^feeds/',
         include((feed_urls, 'data_feeds'), namespace='data_feeds')),
-    url(r'^search/', include((search_urls, 'search'), namespace='search')),
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    re_path(r'^search/', include((search_urls, 'search'), namespace='search')),
+    re_path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'),
-    url(r'', include('payments.urls')),
-    url('', include('social_django.urls', namespace='social'))]
+    re_path(r'', include('payments.urls')),
+    re_path('', include('social_django.urls', namespace='social'))]
 
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns += [
-        url(r'^static/(?P<path>.*)$', serve)] + static(
+        re_path(r'^static/(?P<path>.*)$', serve)] + static(
             settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
