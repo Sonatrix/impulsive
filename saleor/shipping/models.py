@@ -94,4 +94,4 @@ class ShippingMethodCountry(models.Model):
             self.shipping_method, self.get_country_code_display())
 
     def get_total_price(self):
-        return TaxedMoney(net=self.price, gross=self.price)
+        return 0

@@ -76,11 +76,6 @@
   <div class="table__row">
     <div class="row">
       <div class="col-12 order-details__table-footer">
-        <p>
-          {% blocktrans trimmed with shipping_method_name=group.shipping_method_name context "Order details shipment row text"  %}
-          Shipping ({{ shipping_method_name }})
-          {% endblocktrans %}
-        </p>
         {% if group.tracking_number %}
         <p>
           {% blocktrans trimmed with tracking_number=group.tracking_number context "Order details shipment row text"  %}
@@ -99,11 +94,11 @@
     <div class="row">
       <div class="col-8 order-details__table-footer">
         <p>
-          {% trans "Shipping total" context "Order details shipment row text" %}
+          {% trans "Delivery" context "Order details shipment row text" %}
         </p>
       </div>
       <div class="col-4">
-        <p class="float-right">{{ order.shipping_price.gross|amount:'html' }}</p>
+        <p class="float-right">Free</p>
       </div>
     </div>
   </div>

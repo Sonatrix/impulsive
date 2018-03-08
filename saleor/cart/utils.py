@@ -220,6 +220,7 @@ def get_cart_data(cart, shipping_range, currency, discounts):
         cart_total = cart.get_total(discounts=discounts)
         local_cart_total = to_local_currency(cart_total, currency)
         shipping_required = cart.is_shipping_required()
+        print(shipping_range)
         total_with_shipping = TaxedMoneyRange(
             start=cart_total, stop=cart_total)
         if shipping_required and shipping_range:

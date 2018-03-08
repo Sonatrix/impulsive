@@ -20,7 +20,7 @@ def anonymous_user_shipping_address_view(request, checkout):
     if all([user_form.is_valid(), address_form.is_valid()]):
         checkout.shipping_address = address_form.instance
         checkout.email = user_form.cleaned_data['email']
-        return redirect('checkout:shipping-method')
+        return redirect('checkout:summary')
     return TemplateResponse(
         request, 'checkout/shipping_address.html', context={
             'address_form': address_form, 'user_form': user_form,
@@ -63,10 +63,10 @@ def user_shipping_address_view(request, checkout):
                 ShippingAddressesForm.NEW_ADDRESS):
             address_id = addresses_form.cleaned_data['address']
             checkout.shipping_address = Address.objects.get(id=address_id)
-            return redirect('checkout:shipping-method')
+            return redirect('checkout:summary')
         elif address_form.is_valid():
             checkout.shipping_address = address_form.instance
-            return redirect('checkout:shipping-method')
+            return redirect('checkout:summary')
     return TemplateResponse(
         request, 'checkout/shipping_address.html', context={
             'address_form': address_form, 'user_form': addresses_form,
