@@ -231,7 +231,7 @@ class SaleorProvider(BaseProvider):
     def money(self):
         return Money(
             fake.pydecimal(2, 2, positive=True),
-            currency=settings.DEFAULT_CURRENCY)
+            settings.DEFAULT_CURRENCY)
 
     def delivery_region(self):
         return random.choice(DELIVERY_REGIONS)
