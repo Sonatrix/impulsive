@@ -59,7 +59,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.10",
     "mjml": "^3.3.5",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "postcss": "^6.0.11",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
